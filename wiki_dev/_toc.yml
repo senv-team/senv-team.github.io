@@ -1,0 +1,13 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: progress
+- file: rocks
+- file: sun
+- file: clouds
+- file: sea
+
+
