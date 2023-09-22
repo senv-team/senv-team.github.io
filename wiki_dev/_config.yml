@@ -3,7 +3,7 @@
 
 title: senv wiki
 author: senv team
-logo: logo.png
+logo: senv_logo.png
 copyright: "2023"
 
 # Force re-execution of notebooks on each build.
