@@ -18,7 +18,11 @@ Anything worth mentioning
 `````
 
 
-## Sprint 2023-Q4 - "dummy sprint name"
+## Sprint 2023-Q4 - "algaebra"
+
+General information:
+* Sience question: How does algae growth respond to other large scale environmental processes (aka la nino/temperature)?
+* We use Landsat-8 and 9, MODIS Terra and Aqua, Sentinel-2a and 2b
 
 Goals of this sprint:
 * find one dataset they you are interested in
@@ -32,34 +36,52 @@ Goals of this sprint:
 * optionally: write a conclusion
 * make a list with environmental crisis (for now - from the past 10 years)
 
+`````{admonition} 2023-10-19: Science Catch-Up
+#### ToDos:
+#### Done:
+* James (A): figure out how to use the microsoft software (2023-10-19)
+* Christina (A): no new tasks (obsolete)
+* Stephen (A): no new tasks (obsolete)
+* Alisa (A): no new tasks (obsolete)
+* Sweta (A): no new tasks (obsolete)
+#### Notes:
+* working on chlorophyll data of Modis (Aqua)
+`````
 
 
 `````{admonition} 2023-10-07: NASA Space Apps Challenge
 :class: warning
-Upcoming
+#### ToDos:
+* James (A): write about modis L3 data: temperature, cholophyll
+* James (A): table of spectral ranges of satellites
+* Alisa (A): why is chorophyll an indicator of algae
+* Alisa (A): does it show all types of algae? (red, blue, green)
+* Stephen (A): attempt to get modis level-3 data automatically download
+#### Done:
+* Christina (A): Landsat 8 and 9 download - wrote script (2023-10-08)
+* James (A): Level-3 modis download - wrote script (2023-10-08)
 `````
 
 `````{admonition} 2023-09-30: Coding Catch-Up
 #### ToDos:
-* Stephen (A): Bokeh.js / bokeh Python library
 * Sweta (A): NAS with SimCLR
 #### Done:
-* Christina (A): no new tasks
+* Christina (A): no new tasks (obsolete)
+* Stephen (A): Bokeh.js / bokeh Python library (2023-10-08)
 #### Notes:
 * We will create jupyter notebooks for this jupyter book
 `````
-
 
 `````{admonition} 2023-09-28: Science Catch-Up
 :class: tip
 #### ToDos:
 * Alisa (A): learn about algae
-* Alisa (A): access MAXAR data
-* James (A): access Sentinel data
-* James (A): access ASTEAR data
 * Christina (A): access el nino, la nina time series
 
 #### Done:
+* James (A): access Sentinel data - wrote script (2023-10-08)
+* Alisa (A): access MAXAR data (obsolete)
+* James (A): access ASTEAR data (obsolete)
 
 #### Notes:
 * we will focus on algae data and correlate it with temperature/el nino/la nina
@@ -73,20 +95,20 @@ Upcoming
 #### ToDos:
 * Sweta (A): focus on NAS
 * Christina (A): focus on MIL
-* Alisa: focus on geology/which data we can use for which task/why it is important to perform that task
-* James: help Alisa
-* James: do exploratory data analysis
-* Stephen: do website stuff (we need to build a website to showcase our work)
-* Stephen: help with data analysis
 
 #### Done:
-`````
+* Stephen: do website stuff (we need to build a website to showcase our work) (2023-10-08)
+* James: do exploratory data analysis (2023-10-08)
+* Alisa: focus on geology/which data we can use for which task/why it is important to perform that task (2023-10-08)
+* James: help Alisa (2023-10-08)
+* Stephen: help with data analysis (2023-10-08)
 
+`````
 
 `````{admonition} 2023-09-20: The start
 :class: warning
 #### ToDos:
 #### Done:
-* Christina (A): initial creation of jupyter book
-* James (A): reads about "Solar activity and climate"
+* Christina (A): initial creation of jupyter book (2023-09-28)
+* James (A): reads about "Solar activity and climate" (2023-09-28)
 `````

@@ -1,0 +1,5 @@
+"compile" the book: jupyter-book build wiki_dev
+
+then copy everything from "_build/html" to "wiki"
+
+put new files in _toc.yml
