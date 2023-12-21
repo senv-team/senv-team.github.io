@@ -5,6 +5,11 @@ If you feel as lost as we did for accessing data, this wiki entry will be for yo
 
 ## Remote sensing
 
+We focused on the following satellites
+* Landsat
+* Sentinel 2 a/b
+* MODIS
+
 ### Data access
 
 #### via Ocean Color website
@@ -13,8 +18,6 @@ The easiest way we have found to interact with this data is to request a list of
 #### via Planetary Computer Hub
 * For remote sensing data, there is a cool new tool from Microsoft which lets you access all sorts of remote sensing data.
 * You have to request access, but currently (Dec 2023), it is free and we had no problems with getting access.
-
-
 
 
 
