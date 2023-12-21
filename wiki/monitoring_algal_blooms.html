@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Side Env &#8212; senv wiki</title>
+    <title>Monitoring Algal Blooms &#8212; senv wiki</title>
   
   
   
@@ -61,10 +61,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'monitoring_algal_blooms';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Access data" href="access_data.html" />
+    <link rel="prev" title="Remote sensing" href="remote_sensing.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -130,7 +130,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item">
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -149,16 +149,16 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Side Env
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="access_data.html">Access data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="remote_sensing.html">Remote sensing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="monitoring_algal_blooms.html">Monitoring Algal Blooms</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Monitoring Algal Blooms</a></li>
 </ul>
 
     </div>
@@ -230,7 +230,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/senv-team/senv-team.github.io/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/senv-team/senv-team.github.io/issues/new?title=Issue%20on%20page%20%2Fmonitoring_algal_blooms.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -260,7 +260,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/monitoring_algal_blooms.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -342,7 +342,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Side Env</h1>
+    <h1>Monitoring Algal Blooms</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -352,7 +352,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#welcome-to-the-science-environment-wiki">Welcome to the science environment wiki.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#our-use-of-this-data">Our use of this data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modis-level-3-data-products">MODIS Level-3 Data Products</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ocean-temperature-maps">Ocean Temperature Maps</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ocean-chlorophyll-maps">Ocean Chlorophyll Maps</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -364,20 +370,33 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="side-env">
-<h1>Side Env<a class="headerlink" href="#side-env" title="Permalink to this headline">#</a></h1>
-<section id="welcome-to-the-science-environment-wiki">
-<h2>Welcome to the science environment wiki.<a class="headerlink" href="#welcome-to-the-science-environment-wiki" title="Permalink to this headline">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="monitoring-algal-blooms">
+<h1>Monitoring Algal Blooms<a class="headerlink" href="#monitoring-algal-blooms" title="Permalink to this headline">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<p>Monitoring algal blooms is something more easily done from space, given there is standardised data covering a wide area at regular periods over a long period of time. We can also look at related data at the same places, to understand ecological dynamics, the impact of climate change on marine ecosystems, and whether algae growth can be an indicator of larger-scale climate events. For our study, we focused on the following satellites:</p>
 <ul class="simple">
-<li><p>Our wiki is a work in progress, we focus on topics related to coding and science here.</p></li>
+<li><p>Landsat</p></li>
+<li><p>Sentinel-2</p></li>
+<li><p>MODIS</p></li>
 </ul>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="access_data.html">Access data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="remote_sensing.html">Remote sensing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="monitoring_algal_blooms.html">Monitoring Algal Blooms</a></li>
-</ul>
-</div>
+</section>
+<section id="our-use-of-this-data">
+<h2>Our use of this data<a class="headerlink" href="#our-use-of-this-data" title="Permalink to this headline">#</a></h2>
+<p>Landsat, Sentinel-2, and MODIS offer complementary advantages for monitoring algal blooms. Landsat’s extensive historical archive is invaluable for long-term studies, Sentinel-2 provides the spatial detail needed for more localised investigations, and MODIS is unbeatable for observing large-scale trends over short time periods.</p>
+</section>
+<section id="modis-level-3-data-products">
+<h2>MODIS Level-3 Data Products<a class="headerlink" href="#modis-level-3-data-products" title="Permalink to this headline">#</a></h2>
+<section id="ocean-temperature-maps">
+<h3>Ocean Temperature Maps<a class="headerlink" href="#ocean-temperature-maps" title="Permalink to this headline">#</a></h3>
+<p>Ocean temperature plays a crucial role in the growth and spread of algae. Warmer waters can facilitate the rapid multiplication of algae, leading to blooms that could potentially become harmful.</p>
+<p>The MODIS Ocean Temperature Maps provide sea surface temperature measurements on various temporal scales (daily, weekly, monthly, etc.) and spatial scales (down to 1 km resolution). These data are critical for understanding how temperature variations contribute to algae dynamics and can be used in conjunction with other parameters to model and predict algal blooms.</p>
+</section>
+<section id="ocean-chlorophyll-maps">
+<h3>Ocean Chlorophyll Maps<a class="headerlink" href="#ocean-chlorophyll-maps" title="Permalink to this headline">#</a></h3>
+<p>Chlorophyll is the pigment responsible for the green colour in algae, and its concentration in the ocean serves as a direct indicator of algal presence. Higher levels of chlorophyll usually correspond to increased algal activity, making this data vital for identifying and monitoring blooms.</p>
+<p>MODIS Ocean Chlorophyll Maps offer measurements of chlorophyll-a concentration at the ocean’s surface. These are generally available on various temporal scales (daily, weekly, monthly, etc.) and spatial resolutions (usually 4 km). The data are often colour-coded, making it easy to identify areas of high algal concentration.</p>
+</section>
 </section>
 </section>
 
@@ -412,14 +431,14 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="right-next"
-       href="access_data.html"
-       title="next page">
+    <a class="left-prev"
+       href="remote_sensing.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Access data</p>
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Remote sensing</p>
       </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div></div>
   
@@ -439,7 +458,13 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#welcome-to-the-science-environment-wiki">Welcome to the science environment wiki.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#our-use-of-this-data">Our use of this data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modis-level-3-data-products">MODIS Level-3 Data Products</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ocean-temperature-maps">Ocean Temperature Maps</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ocean-chlorophyll-maps">Ocean Chlorophyll Maps</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

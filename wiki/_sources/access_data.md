@@ -3,19 +3,16 @@
 If you feel as lost as we did for accessing data, this wiki entry will be for you!
 
 
-
 ## Remote sensing
-
-We focused on the following satellites
-* Landsat
-* Sentinel 2 a/b
-* MODIS
 
 ### Data access
 
+#### via Ocean Color website
+The easiest way we have found to interact with this data is to request a list of download URLs from NASA's Ocean Color website https://oceancolor.gsfc.nasa.gov, and then batch-process these in Python.
+
 #### via Planetary Computer Hub
-* For remote sensing data, there is a cool new tool from Microsoft, which lets you access all sorts of remote sensing data.
-* You have to register, but currently (Dec 2023), it is free and we had no problems with getting access.
+* For remote sensing data, there is a cool new tool from Microsoft which lets you access all sorts of remote sensing data.
+* You have to request access, but currently (Dec 2023), it is free and we had no problems with getting access.
 
 
 
@@ -24,14 +21,12 @@ We focused on the following satellites
 ## Planetary science
 
 We focused on the following spaceprobes
-* CASSINI
+* Cassini
 
 ### Data access
 
 #### via NASA pds imaging server
 * https://pds-imaging.jpl.nasa.gov/portal/
-
-
 
 ### Use case: VIMS from Cassini
 
@@ -44,6 +39,8 @@ We focused on the following spaceprobes
 * Looks very dodgy from the start, but it surprisingly works.
 * It is a digital image processing software package to manipulate imagery collected by current and past NASA and International planetary missions. 
 * Access it here: https://github.com/DOI-USGS/ISIS3
+
+
 
 
 

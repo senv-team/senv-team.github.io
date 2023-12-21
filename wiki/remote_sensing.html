@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Side Env &#8212; senv wiki</title>
+    <title>Remote sensing &#8212; senv wiki</title>
   
   
   
@@ -61,10 +61,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'remote_sensing';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Access data" href="access_data.html" />
+    <link rel="next" title="Monitoring Algal Blooms" href="monitoring_algal_blooms.html" />
+    <link rel="prev" title="Access data" href="access_data.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -130,7 +131,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item">
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -149,15 +150,15 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Side Env
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="access_data.html">Access data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="remote_sensing.html">Remote sensing</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Remote sensing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="monitoring_algal_blooms.html">Monitoring Algal Blooms</a></li>
 </ul>
 
@@ -230,7 +231,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/senv-team/senv-team.github.io/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/senv-team/senv-team.github.io/issues/new?title=Issue%20on%20page%20%2Fremote_sensing.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -260,7 +261,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/remote_sensing.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -342,7 +343,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Side Env</h1>
+    <h1>Remote sensing</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -352,7 +353,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#welcome-to-the-science-environment-wiki">Welcome to the science environment wiki.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-levels">Data levels</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#satellites">Satellites</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#landsat">Landsat</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sentinel-2">Sentinel-2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modis">MODIS</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -364,20 +371,33 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="side-env">
-<h1>Side Env<a class="headerlink" href="#side-env" title="Permalink to this headline">#</a></h1>
-<section id="welcome-to-the-science-environment-wiki">
-<h2>Welcome to the science environment wiki.<a class="headerlink" href="#welcome-to-the-science-environment-wiki" title="Permalink to this headline">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="remote-sensing">
+<h1>Remote sensing<a class="headerlink" href="#remote-sensing" title="Permalink to this headline">#</a></h1>
+<section id="data-levels">
+<h2>Data levels<a class="headerlink" href="#data-levels" title="Permalink to this headline">#</a></h2>
+<p>Firstly, it is important to understand the different levels of data which we can work with. A full description can be found here: <a class="reference external" href="https://www.earthdata.nasa.gov/engage/open-data-services-and-software/data-information-policy/data-levels">https://www.earthdata.nasa.gov/engage/open-data-services-and-software/data-information-policy/data-levels</a>, but as a summary:</p>
 <ul class="simple">
-<li><p>Our wiki is a work in progress, we focus on topics related to coding and science here.</p></li>
+<li><p>Level 0: This is the most basic data from the spacecraft, at full resolution. It is unprocessed from the spacecraft.</p></li>
+<li><p>Level 1: Processing is included to label the data.</p></li>
+<li><p>Level 2: Geophysical variables are derived at the same resolution as the L1 data.</p></li>
+<li><p>Level 3: Variables are included on maps and can be averaged out over time periods.</p></li>
+<li><p>Level 4: Variables are derived from multiple data streams including other L1 data.</p></li>
 </ul>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="access_data.html">Access data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="remote_sensing.html">Remote sensing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="monitoring_algal_blooms.html">Monitoring Algal Blooms</a></li>
-</ul>
-</div>
+</section>
+<section id="satellites">
+<h2>Satellites<a class="headerlink" href="#satellites" title="Permalink to this headline">#</a></h2>
+<section id="landsat">
+<h3>Landsat<a class="headerlink" href="#landsat" title="Permalink to this headline">#</a></h3>
+<p>Landsat satellites have been providing detailed images of the Earth’s surface since the 1970s. Their long-term data archive is highly valuable for studying temporal patterns of algal blooms. Landsat data typically has a spatial resolution ranging from 15 to 100 metres, depending on the sensor. This makes it ideal for studying larger water bodies but less suitable for small-scale features. Landsat 8 offers the highest resolution imagery, with data going back to 2013.</p>
+</section>
+<section id="sentinel-2">
+<h3>Sentinel-2<a class="headerlink" href="#sentinel-2" title="Permalink to this headline">#</a></h3>
+<p>The Sentinel-2 mission provides high-resolution optical imagery with a spatial resolution as fine as 10 metres. It has 13 spectral bands, including those sensitive to chlorophyll concentrations, which is essential for algae monitoring. The relatively short revisit time (5 days with two satellites in operation) allows for more frequent monitoring, enabling researchers to capture short-term variations in algal blooms.</p>
+</section>
+<section id="modis">
+<h3>MODIS<a class="headerlink" href="#modis" title="Permalink to this headline">#</a></h3>
+<p>MODIS (Moderate Resolution Imaging Spectroradiometer) provides a unique blend of high temporal resolution and broad spatial coverage, with resolutions ranging from 250 metres to 1 kilometer. It captures data in 36 spectral bands, including those suitable for studying sea surface temperature and chlorophyll concentrations. This makes MODIS ideal for large-scale, long-term studies of algae distribution patterns and their correlation with environmental factors.</p>
+</section>
 </section>
 </section>
 
@@ -412,12 +432,21 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="right-next"
+    <a class="left-prev"
        href="access_data.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Access data</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="monitoring_algal_blooms.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Access data</p>
+        <p class="prev-next-title">Monitoring Algal Blooms</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -439,7 +468,13 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#welcome-to-the-science-environment-wiki">Welcome to the science environment wiki.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-levels">Data levels</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#satellites">Satellites</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#landsat">Landsat</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sentinel-2">Sentinel-2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modis">MODIS</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

@@ -5,5 +5,6 @@ format: jb-book
 root: intro
 chapters:
 - file: access_data
-
+- file: remote_sensing
+- file: monitoring_algal_blooms
 
