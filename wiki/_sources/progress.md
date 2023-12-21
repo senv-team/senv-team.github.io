@@ -2,22 +2,6 @@
 
 This is our progress board!
 
-## Sprint
-
-Goals of this sprint:
-* List things here
-
-`````{admonition} YYYY-MM-DD: Science/Coding Catch-Up
-:class: tip
-#### ToDos:
-* Name (A = Attended): the todo we assigned this meeting (will be moved to done once it is done)
-#### Done: 
-* Name: the todo once it is done (date of done YYYY-MM-DD/obsolete)
-#### Notes:
-Anything worth mentioning
-`````
-
-
 ## Sprint 2023-Q4 - "algaebra"
 
 General information:
@@ -36,14 +20,67 @@ Goals of this sprint:
 * optionally: write a conclusion
 * make a list with environmental crisis (for now - from the past 10 years)
 
+
+`````{admonition} 2023-11-02: Science Catch-Up
+:class:
+#### ToDos:
+#### Done: 
+#### Notes:
+`````
+
+`````{admonition} 2023-11-30: Science Catch-Up
+:class:
+#### ToDos:
+#### Done: 
+* Alisa (A): Python tutorials (2023-11-30)
+* Christina (A): learning about algae, starting lit review for deep learning for algae (2023-11-30)
+* James (A): coding of batch processing files (2023-11-30)
+* Stephen (A): helped others (2023-11-30)
+#### Notes:
+Jellyfish are kind of algae!!
+Phycology is the study or science of algae
+`````
+
+`````{admonition} 2023-11-23: Science Catch-Up
+:class:
+#### ToDos: 
+* James (A): turning time-series analysis for temperature/chlorophyll maps - correlation
+* Maxi (A): looking for sea level depth data 
+#### Done: 
+* Alisa (A): python tutorials - printed hello world (23.11.2023)
+* Christina (A): (obsolete)
+#### Notes:
+`````
+
+`````{admonition} 2023-10-28: Coding Catch-Up
+:class: tip
+#### ToDos:
+#### Done: 
+* Maxi (A): no new tasks, see notes (obsolete)
+* Stephen (A): no new tasks, see notes (obsolete)
+* Christina (A): no new tasks, see notes (obsolete)
+#### Notes:
+* we went through dataloaders and pytorch lightning
+`````
+
+`````{admonition} 2023-10-26: Science Catch-Up
+#### ToDos:
+#### Done:
+* James (A): no new tasks, see notes (obsolete)
+* Christina (A): no new tasks, see notes (obsolete)
+#### Notes:
+* working with data of Modis (Aqua) - cleanup of the data access file
+`````
+
 `````{admonition} 2023-10-19: Science Catch-Up
 #### ToDos:
 #### Done:
 * James (A): figure out how to use the microsoft software (2023-10-19)
-* Christina (A): no new tasks (obsolete)
-* Stephen (A): no new tasks (obsolete)
-* Alisa (A): no new tasks (obsolete)
-* Sweta (A): no new tasks (obsolete)
+* Christina (A): no new tasks, see notes (obsolete)
+* Stephen (A): no new tasks, see notes (obsolete)
+* Alisa (A): no new tasks, see notes (obsolete)
+* Sweta (A): no new tasks, see notes (obsolete)
+* Maxi (A): no new tasks, see notes (obsolete)
 #### Notes:
 * working on chlorophyll data of Modis (Aqua)
 `````
@@ -111,4 +148,21 @@ Goals of this sprint:
 #### Done:
 * Christina (A): initial creation of jupyter book (2023-09-28)
 * James (A): reads about "Solar activity and climate" (2023-09-28)
+`````
+
+
+
+## Sprint YYYY-QX - "example sprint name"
+
+Goals of this sprint:
+* List things here
+
+`````{admonition} YYYY-MM-DD: Science/Coding Catch-Up
+:class: tip
+#### ToDos:
+* Name (A = Attended): the todo we assigned this meeting (will be moved to done once it is done)
+#### Done: 
+* Name: the todo once it is done (date of done YYYY-MM-DD/obsolete)
+#### Notes:
+Anything worth mentioning
 `````

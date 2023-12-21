@@ -4,10 +4,6 @@
 format: jb-book
 root: intro
 chapters:
-- file: progress
-- file: rocks
-- file: sun
-- file: clouds
-- file: sea
+- file: access_data
 
 
