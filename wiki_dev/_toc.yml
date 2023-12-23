@@ -3,8 +3,15 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: access_data
-- file: remote_sensing
-- file: monitoring_algal_blooms
-
+parts:
+- caption: Senv Team
+  chapters:
+    - title: Senv website
+      url: https://senv-team.github.io
+    - title: Twitter
+      url: https://twitter.com/senv-team
+- caption: Wiki
+  chapters:
+      - file: access_data
+      - file: remote_sensing
+      - file: monitoring_algal_blooms
