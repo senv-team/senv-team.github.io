@@ -9,9 +9,18 @@ parts:
     - title: Senv website
       url: https://senv-team.github.io
     - title: Twitter
-      url: https://twitter.com/senv-team
-- caption: Wiki
+      url: https://twitter.com/senv_team
+- caption: Imaging and data
   chapters:
       - file: access_data
       - file: remote_sensing
       - file: monitoring_algal_blooms
+- caption: Applications
+  chapters:
+      - file: dl_applications
+- caption: Code
+  chapters:
+      - file: intro_to_dl
+- caption: Science
+  chapters:
+      - file: algae

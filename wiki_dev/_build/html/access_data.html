@@ -160,13 +160,25 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Senv Team</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference external" href="https://senv-team.github.io">Senv website</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://twitter.com/senv-team">Twitter</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://twitter.com/senv_team">Twitter</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Wiki</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Imaging and data</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Access data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="remote_sensing.html">Remote sensing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="monitoring_algal_blooms.html">Monitoring Algal Blooms</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Applications</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="dl_applications.html">Deep learning applications</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Code</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="intro_to_dl.html">Introduction to deep learning</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Science</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="algae.html">Algae</a></li>
 </ul>
 
     </div>
@@ -360,7 +372,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#remote-sensing">Remote sensing</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#earth-observation-remote-sensing">Earth observation / remote sensing</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-access">Data access</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#via-ocean-color-website">via Ocean Color website</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#via-planetary-computer-hub">via Planetary Computer Hub</a></li>
@@ -375,9 +387,14 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#planetary-science">Planetary science</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solar-system-remote-sensing">Solar system / remote sensing</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Data access</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#via-nasa-pds-imaging-server">via NASA pds imaging server</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#via-pilot">via PILOT</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-cub-files">Open cub files</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#via-integrated-software-for-imagers-and-spectrometers-v3">via Integrated Software for Imagers and Spectrometers v3</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-vims-from-cassini">Use case: VIMS from Cassini</a><ul class="nav section-nav flex-column">
@@ -410,8 +427,8 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="access-data">
 <h1>Access data<a class="headerlink" href="#access-data" title="Permalink to this headline">#</a></h1>
 <p>If you feel as lost as we did for accessing data, this wiki entry will be for you!</p>
-<section id="remote-sensing">
-<h2>Remote sensing<a class="headerlink" href="#remote-sensing" title="Permalink to this headline">#</a></h2>
+<section id="earth-observation-remote-sensing">
+<h2>Earth observation / remote sensing<a class="headerlink" href="#earth-observation-remote-sensing" title="Permalink to this headline">#</a></h2>
 <p>We focused on the following satellites</p>
 <ul class="simple">
 <li><p>Landsat</p></li>
@@ -470,8 +487,8 @@ document.write(`
 </section>
 </section>
 </section>
-<section id="planetary-science">
-<h2>Planetary science<a class="headerlink" href="#planetary-science" title="Permalink to this headline">#</a></h2>
+<section id="solar-system-remote-sensing">
+<h2>Solar system / remote sensing<a class="headerlink" href="#solar-system-remote-sensing" title="Permalink to this headline">#</a></h2>
 <p>We focused on the following spaceprobes</p>
 <ul class="simple">
 <li><p>Cassini</p></li>
@@ -481,7 +498,32 @@ document.write(`
 <section id="via-nasa-pds-imaging-server">
 <h4>via NASA pds imaging server<a class="headerlink" href="#via-nasa-pds-imaging-server" title="Permalink to this headline">#</a></h4>
 <ul class="simple">
-<li><p><a class="reference external" href="https://pds-imaging.jpl.nasa.gov/portal/">https://pds-imaging.jpl.nasa.gov/portal/</a></p></li>
+<li><p>slides: <a class="reference external" href="https://pds-imaging.jpl.nasa.gov/help/How_to_obtain_Cassini_data.pdf">https://pds-imaging.jpl.nasa.gov/help/How_to_obtain_Cassini_data.pdf</a></p></li>
+<li><p>the data: <a class="reference external" href="https://pds-imaging.jpl.nasa.gov/portal/">https://pds-imaging.jpl.nasa.gov/portal/</a></p></li>
+</ul>
+</section>
+<section id="via-pilot">
+<h4>via PILOT<a class="headerlink" href="#via-pilot" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>After selecting a region, you can download a csv file with links of all relevant images.</p></li>
+<li><p>A file has e.g. 200kb</p></li>
+<li><p><a class="reference external" href="https://pilot.wr.usgs.gov/">https://pilot.wr.usgs.gov/</a></p></li>
+</ul>
+</section>
+</section>
+<section id="open-cub-files">
+<h3>Open cub files<a class="headerlink" href="#open-cub-files" title="Permalink to this headline">#</a></h3>
+<section id="via-integrated-software-for-imagers-and-spectrometers-v3">
+<h4>via Integrated Software for Imagers and Spectrometers v3<a class="headerlink" href="#via-integrated-software-for-imagers-and-spectrometers-v3" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>Using the Integrated Software for Imagers and Spectrometers v3</p></li>
+<li><p>Looks very dodgy from the start, but it surprisingly works.</p></li>
+<li><p>It is a digital image processing software package to manipulate imagery collected by current and past NASA and International planetary missions.</p></li>
+<li><p>Access it here: <a class="github reference external" href="https://github.com/DOI-USGS/ISIS3">DOI-USGS/ISIS3</a></p></li>
+<li><p>open an image <a class="github reference external" href="https://github.com/DOI-USGS/ISIS3/wiki/Qview_Plot">DOI-USGS/ISIS3</a></p></li>
+<li><p>documentation: <a class="github reference external" href="https://github.com/DOI-USGS/ISIS3/wiki/Working_with_Cassini_VIMS">DOI-USGS/ISIS3</a></p></li>
+<li><p>documentation: <a class="reference external" href="https://isis.astrogeology.usgs.gov/7.0.0/index.html">https://isis.astrogeology.usgs.gov/7.0.0/index.html</a></p></li>
+<li><p>pyvims: <a class="reference external" href="https://vims.univ-nantes.fr/info/isis-calibration">https://vims.univ-nantes.fr/info/isis-calibration</a></p></li>
 </ul>
 </section>
 </section>
@@ -497,10 +539,7 @@ document.write(`
 <section id="step-2-open-cub-files">
 <h4>Step 2: open cub files<a class="headerlink" href="#step-2-open-cub-files" title="Permalink to this headline">#</a></h4>
 <ul class="simple">
-<li><p>Using the Integrated Software for Imagers and Spectrometers v3</p></li>
-<li><p>Looks very dodgy from the start, but it surprisingly works.</p></li>
-<li><p>It is a digital image processing software package to manipulate imagery collected by current and past NASA and International planetary missions.</p></li>
-<li><p>Access it here: <a class="github reference external" href="https://github.com/DOI-USGS/ISIS3">DOI-USGS/ISIS3</a></p></li>
+<li><p>use Integrated Software for Imagers and Spectrometers v3</p></li>
 </ul>
 </section>
 </section>
@@ -607,7 +646,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#remote-sensing">Remote sensing</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#earth-observation-remote-sensing">Earth observation / remote sensing</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-access">Data access</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#via-ocean-color-website">via Ocean Color website</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#via-planetary-computer-hub">via Planetary Computer Hub</a></li>
@@ -622,9 +661,14 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#planetary-science">Planetary science</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solar-system-remote-sensing">Solar system / remote sensing</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Data access</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#via-nasa-pds-imaging-server">via NASA pds imaging server</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#via-pilot">via PILOT</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-cub-files">Open cub files</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#via-integrated-software-for-imagers-and-spectrometers-v3">via Integrated Software for Imagers and Spectrometers v3</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-vims-from-cassini">Use case: VIMS from Cassini</a><ul class="nav section-nav flex-column">

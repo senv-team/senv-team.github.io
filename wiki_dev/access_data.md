@@ -3,7 +3,7 @@
 If you feel as lost as we did for accessing data, this wiki entry will be for you!
 
 
-## Remote sensing
+## Earth observation / remote sensing
 
 We focused on the following satellites
 * Landsat
@@ -46,7 +46,7 @@ The easiest way we have found to interact with this data is to request a list of
 
 
 
-## Planetary science
+## Solar system / remote sensing
 
 We focused on the following spaceprobes
 * Cassini
@@ -54,7 +54,25 @@ We focused on the following spaceprobes
 ### Data access
 
 #### via NASA pds imaging server
-* https://pds-imaging.jpl.nasa.gov/portal/
+* slides: https://pds-imaging.jpl.nasa.gov/help/How_to_obtain_Cassini_data.pdf
+* the data: https://pds-imaging.jpl.nasa.gov/portal/
+
+#### via PILOT
+* After selecting a region, you can download a csv file with links of all relevant images.
+* A file has e.g. 200kb
+* https://pilot.wr.usgs.gov/
+
+### Open cub files
+
+#### via Integrated Software for Imagers and Spectrometers v3
+* Using the Integrated Software for Imagers and Spectrometers v3
+* Looks very dodgy from the start, but it surprisingly works.
+* It is a digital image processing software package to manipulate imagery collected by current and past NASA and International planetary missions. 
+* Access it here: https://github.com/DOI-USGS/ISIS3
+* open an image https://github.com/DOI-USGS/ISIS3/wiki/Qview_Plot
+* documentation: https://github.com/DOI-USGS/ISIS3/wiki/Working_with_Cassini_VIMS
+* documentation: https://isis.astrogeology.usgs.gov/7.0.0/index.html
+* pyvims: https://vims.univ-nantes.fr/info/isis-calibration
 
 ### Use case: VIMS from Cassini
 
@@ -63,14 +81,7 @@ We focused on the following spaceprobes
 * https://pds-imaging.jpl.nasa.gov/volumes/vims.html
 
 #### Step 2: open cub files
-* Using the Integrated Software for Imagers and Spectrometers v3
-* Looks very dodgy from the start, but it surprisingly works.
-* It is a digital image processing software package to manipulate imagery collected by current and past NASA and International planetary missions. 
-* Access it here: https://github.com/DOI-USGS/ISIS3
-
-
-
-
+* use Integrated Software for Imagers and Spectrometers v3
 
 ## Medical images
 
