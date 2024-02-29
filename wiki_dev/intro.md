@@ -1,4 +1,4 @@
-# Side Env
+# Wiki
 
 
 ## Welcome to the science environment wiki.
