@@ -599,7 +599,7 @@
 // Size ?
 var box = document.querySelector('.content');
 var width = box.offsetWidth;
-var height = box.offsetWidth - box.offsetWidth/4;
+var height = box.offsetWidth - box.offsetWidth/3;
 
 // The svg
 var svg = d3.select("#my_dataviz")
@@ -609,9 +609,9 @@ var svg = d3.select("#my_dataviz")
 
 // Map and projection
 var projection = d3.geoMercator()
-    .center([-90.5, 29.5])                // GPS of location to zoom on
-    .scale(9000)                       // This is like the zoom
-    .translate([ width/2, height/2 ])
+    .center([-48, 48])                // GPS of location to zoom on
+    .scale(500)                       // This is like the zoom
+    .translate([ 2, 4 ]) // width/100, height/100
 
 // Create data for circles:
 /*var markers = [
@@ -619,6 +619,7 @@ var projection = d3.geoMercator()
   {long: -90.822, lat: 29.171, name: "Atchafalaya River and Terrebonne Basins, Louisiana 1"}
 ];*/
 
+/*
 var cities = [
   {lat: 30.222708, long: -92.021188, name: "Lafayette"},
   {lat: 30.446537, long: -91.179788, name: "Baton Rouge"},
@@ -628,6 +629,7 @@ var cities = [
   //{lat: 30.219550, long: -93.212037, name: "Lake Charles"},
   //{lat: 30.207972, long: -92.681870, name: "Jennings"},
 ];
+*/
 
 /*
 var Bathy = [];
@@ -764,6 +766,10 @@ d3.csv("https://raw.githubusercontent.com/Conex-Research/conex-research.github.i
 })
 */
 
+var Airpressure = [
+              {"long":-91.445,"lat":29.510, name:"Air pressure at Make Island in Atchafalaya River", "description": "In Fall 2021, the Solinst Levelogger Junior Edge Model 3001 and the Onset HOBO U20L instruments were used to measure air pressure." , id:"Atchafalaya_Airpressure", class:"measurements"}
+              ];
+/*
 
 var Airpressure = [
               {"long":-91.445,"lat":29.510, name:"Air pressure at Make Island in Atchafalaya River", "description": "In Fall 2021, the Solinst Levelogger Junior Edge Model 3001 and the Onset HOBO U20L instruments were used to measure air pressure." , id:"Atchafalaya_Airpressure", class:"measurements"},
@@ -776,7 +782,7 @@ var Alternanthera = [
               {"long":-91.44506,"lat":29.42521},
               {"long":-91.44506,"lat":29.53945}];
 
-
+*/
 
 
 
@@ -785,7 +791,7 @@ var Alternanthera = [
 // Load external data and boot
 // https://d3-graph-gallery.com/graph/bubblemap_tooltip.html
 /* https://raw.githubusercontent.com/Conex-Research/conex-research.github.io/main/data/us-filtered.json */
-d3.json("https://raw.githubusercontent.com/Conex-Research/conex-research.github.io/main/data/us-filtered.json", function(data){
+d3.json("https://raw.githubusercontent.com/senv-team/senv-team.github.io/main/data/custom.geo.json", function(data){
 
   // "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson"
 
@@ -815,7 +821,7 @@ d3.json("https://raw.githubusercontent.com/Conex-Research/conex-research.github.
       .style("border-width", "2px")
       .style("border-radius", "5px")
       .style("padding", "5px")
-      .html("Select a box")
+      .html("Select a box [coming soon]")
 
 
     var mouseover_Airpressure = function(d) {
