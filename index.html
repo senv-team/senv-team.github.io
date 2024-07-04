@@ -608,10 +608,11 @@ var svg = d3.select("#my_dataviz")
   .attr("height", height)
 
 // Map and projection
-var projection = d3.geoMercator()
-    .center([-48, 48])                // GPS of location to zoom on
-    .scale(500)                       // This is like the zoom
-    .translate([ 2, 4 ]) // width/100, height/100
+var projection = d3.geoMercator() 
+                .scale(width / 2.5 / Math.PI) 
+                .rotate([90, 0]) 
+                .center([20, 20]) 
+                .translate([width / 2, height / 2]); 
 
 // Create data for circles:
 /*var markers = [
@@ -619,17 +620,45 @@ var projection = d3.geoMercator()
   {long: -90.822, lat: 29.171, name: "Atchafalaya River and Terrebonne Basins, Louisiana 1"}
 ];*/
 
-/*
+
 var cities = [
-  {lat: 30.222708, long: -92.021188, name: "Lafayette"},
-  {lat: 30.446537, long: -91.179788, name: "Baton Rouge"},
-  {lat: 29.935802, long: -90.092378, name: "New Orleans"},
-  {lat: 29.487184, long: -89.703631, name: "Port Sulphur"},
-  {lat: 29.639886, long: -91.224589, name: "St Mary Parish"}
+    {lat : 37, long: -122, name: "SF"}
+  //{lat: 30.222708, long: -92.021188, name: "Lafayette"},
+  //{lat: 30.446537, long: -91.179788, name: "Baton Rouge"},
+  //{lat: 29.935802, long: -90.092378, name: "New Orleans"},
+  //{lat: 29.487184, long: -89.703631, name: "Port Sulphur"},
+  //{lat: 29.639886, long: -91.224589, name: "St Mary Parish"}
   //{lat: 30.219550, long: -93.212037, name: "Lake Charles"},
   //{lat: 30.207972, long: -92.681870, name: "Jennings"},
 ];
-*/
+
+
+
+var regions = [
+            { pol: [{"x":0.0, "y":25.0},{"x":8.5,"y":23.4},{"x":13.0,"y":21.0},{"x":19.0,"y":15.5}], name:"Nino_3_4"}
+    ];
+
+poly = [{"x":0.0, "y":25.0},
+        {"x":8.5,"y":23.4},
+        {"x":13.0,"y":21.0},
+        {"x":19.0,"y":15.5}];
+
+// 5N-5S, 170W-120W
+// N = plus, W = minus
+const polygonData = [
+            //{ name: "Nino_3_4", points: [[10, 170], [100, 120], [-5, 170], [-5, 120]] },
+            //{ name: "Quadrilateral", points: [[-170, 5], [170, -5], [350, 200], [250, 100]] },
+            { name: "sanfran", points: [[50, -122], [37, -121], [59, -120], [40, -172]] }
+        ];
+
+
+
+
+/*
+    poly = [{"x":0.0, "y":25.0},
+        {"x":8.5,"y":23.4},
+        {"x":13.0,"y":21.0},
+        {"x":19.0,"y":15.5}];*/
 
 /*
 var Bathy = [];
@@ -766,23 +795,27 @@ d3.csv("https://raw.githubusercontent.com/Conex-Research/conex-research.github.i
 })
 */
 
+/*
 var Airpressure = [
               {"long":-91.445,"lat":29.510, name:"Air pressure at Make Island in Atchafalaya River", "description": "In Fall 2021, the Solinst Levelogger Junior Edge Model 3001 and the Onset HOBO U20L instruments were used to measure air pressure." , id:"Atchafalaya_Airpressure", class:"measurements"}
               ];
-/*
+
+
+
+
 
 var Airpressure = [
               {"long":-91.445,"lat":29.510, name:"Air pressure at Make Island in Atchafalaya River", "description": "In Fall 2021, the Solinst Levelogger Junior Edge Model 3001 and the Onset HOBO U20L instruments were used to measure air pressure." , id:"Atchafalaya_Airpressure", class:"measurements"},
               {"long":-90.823,"lat":29.172, name:"Air pressure at Terrebonne", "description": "In Fall 2021, the Solinst Levelogger Junior Edge Model 3001 was used to measure air pressure." , id:"Terrebonne_Airpressure", class:"measurements"}
               ];
-
-var Alternanthera = [
+*/
+/*var Alternanthera = [
             {"long":-91.27973,"lat":29.53945, name: "Occurance of alternanthera philoxeroides", "description": "In Fall 2015, vegetation was analysed. In this region, Alternanthera philoxeroides was found." , id:"Alternanthera", class:"measurements"},
               {"long":-91.27973,"lat":29.42521},
               {"long":-91.44506,"lat":29.42521},
               {"long":-91.44506,"lat":29.53945}];
-
 */
+
 
 
 
@@ -990,6 +1023,20 @@ d3.json("https://raw.githubusercontent.com/senv-team/senv-team.github.io/main/da
         .attr("stroke", "#119900")
     }
 
+
+    polygonData.forEach((polygon, index) => {
+            svg.append("polygon")
+                .attr("points", polygon.points.map(p => p.join(",")).join(" "))
+                .attr("fill", `rgba(0, 100, 200, ${0.2 + index * 0.2})` ) // Varying blue opacity for each polygon
+                .attr("stroke", "black")
+                .attr("stroke-width", 2)
+                .attr("data-name", polygon.name); // Custom attribute to store polygon name
+      });
+
+
+
+
+    /*
     svg
       .selectAll("Airpressure_polygons")
       .data(Airpressure)
@@ -1024,7 +1071,7 @@ d3.json("https://raw.githubusercontent.com/senv-team/senv-team.github.io/main/da
       .attr("class", function(d){return d[0].class})
       .attr("fill-opacity", .2)
       .on("mouseover", mouseover_Alternanthera)
-
+*/
     svg
       .selectAll("city_circle")
       .data(cities)
@@ -1045,6 +1092,32 @@ d3.json("https://raw.githubusercontent.com/senv-team/senv-team.github.io/main/da
      .attr("y", function(d){ return projection([d.long+0.07, d.lat-0.03])[1] })
      .attr("text-anchor", "start")
      .text(function(d){ return d.name })
+/*
+     svg
+      .selectAll("region_polygons")
+      .data([regions])
+      .enter()
+      .append("polygon")
+        .attr("points",function(d) { 
+            return d.map(function(d) {
+                return [scaleX(d.x),scaleY(d.y)].join(",");
+            }).join(" ");
+        })
+        .attr("class", "region")
+        .style("fill", "#173b6c")*/
+
+    /*
+    svg.selectAll("polygon")
+        .data([poly])
+      .enter().append("polygon")
+        .attr("points",function(d) { 
+            return d.map(function(d) {
+                return [scaleX(d.x),scaleY(d.y)].join(",");
+            }).join(" ");
+        })
+        .attr("stroke","black")
+        .attr("stroke-width",2);
+    */
 
     /*
      svg
