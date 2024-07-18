@@ -609,10 +609,10 @@ var svg = d3.select("#my_dataviz")
 
 // Map and projection
 var projection = d3.geoMercator() 
-                .scale(width / 2.5 / Math.PI) 
-                .rotate([90, 0]) 
-                .center([20, 20]) 
-                .translate([width / 2, height / 2]); 
+                .scale(100)// width / 2.5 / Math.PI) 
+                //.rotate([90, 0]) 
+                .center([15, 48]) 
+                //.translate([width / 2, height / 2]); 
 
 // Create data for circles:
 /*var markers = [
@@ -622,7 +622,8 @@ var projection = d3.geoMercator()
 
 
 var cities = [
-    {lat : 37, long: -122, name: "SF"}
+    {lat : 37, long: -122, name: "SF"},
+    {lat: 48, long: 16, name: "Vie"}
   //{lat: 30.222708, long: -92.021188, name: "Lafayette"},
   //{lat: 30.446537, long: -91.179788, name: "Baton Rouge"},
   //{lat: 29.935802, long: -90.092378, name: "New Orleans"},
@@ -631,6 +632,24 @@ var cities = [
   //{lat: 30.219550, long: -93.212037, name: "Lake Charles"},
   //{lat: 30.207972, long: -92.681870, name: "Jennings"},
 ];
+
+const vienna_polygon = {
+  type: "Feature",
+  geometry: {
+    type: "Polygon",
+    coordinates: [
+      [
+        [13.2205, 48.9000], // Southwest corner
+        [15.2205, 47.3400], // Northwest corner
+        [18.5705, 46.3400], // Northeast corner
+        [16.5705, 45.3400],
+        [17.5705, 50.9000], // Southeast corner
+        [11.2205, 48.9000]  // Back to Southwest corner
+      ]
+    ]
+  }
+};
+
 
 
 
@@ -650,6 +669,9 @@ const polygonData = [
             //{ name: "Quadrilateral", points: [[-170, 5], [170, -5], [350, 200], [250, 100]] },
             { name: "sanfran", points: [[50, -122], [37, -121], [59, -120], [40, -172]] }
         ];
+
+
+
 
 
 
@@ -1036,6 +1058,8 @@ d3.json("https://raw.githubusercontent.com/senv-team/senv-team.github.io/main/da
 
 
 
+
+
     /*
     svg
       .selectAll("Airpressure_polygons")
@@ -1092,6 +1116,25 @@ d3.json("https://raw.githubusercontent.com/senv-team/senv-team.github.io/main/da
      .attr("y", function(d){ return projection([d.long+0.07, d.lat-0.03])[1] })
      .attr("text-anchor", "start")
      .text(function(d){ return d.name })
+
+
+
+
+//     {lat : 37, long: -122, name: "SF"}
+//   { name: "sanfran", points: [[50, -122], [37, -121], [59, -120], [40, -172]] }
+
+
+
+    const path = d3.geoPath().projection(projection);
+
+    // Draw the polygon
+    svg.append("path")
+      .datum(vienna_polygon)
+      .attr("d", path)
+      .attr("fill", "none")
+      .attr("stroke", "black")
+      .attr("stroke-width", 1);
+
 /*
      svg
       .selectAll("region_polygons")
