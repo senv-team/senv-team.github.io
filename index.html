@@ -1135,6 +1135,20 @@ d3.json("https://raw.githubusercontent.com/senv-team/senv-team.github.io/main/da
       .attr("stroke", "black")
       .attr("stroke-width", 1);
 
+
+    // Load the GeoJSON FeatureCollection and draw the bounding box polygon
+    d3.json("https://raw.githubusercontent.com/senv-team/senv-team.github.io/main/data/elnino_rectangle.geojson").then(data => {
+      svg.selectAll("path")
+        .data(data.features)
+        .enter().append("path")
+        .attr("d", path)
+        .attr("fill", "none")
+        .attr("stroke", "black")
+        .attr("stroke-width", 1);
+    }).catch(error => {
+      console.error("Error loading the GeoJSON data: ", error);
+    });
+
 /*
      svg
       .selectAll("region_polygons")
