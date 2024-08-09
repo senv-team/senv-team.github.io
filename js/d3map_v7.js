@@ -1,6 +1,8 @@
 // source: https://www.d3indepth.com/geographic/
 
 let geojson;
+let georoi;
+
 let projectionTypes = [
   'Equirectangular'
 ];
@@ -36,6 +38,8 @@ var points = [
 ];
 */
 // var pathData = radialLineGenerator(points);
+
+
 
 
 let state = {
@@ -140,7 +144,9 @@ function update() {
 
 
 var path_continents = "https://gist.githubusercontent.com/d3indepth/f28e1c3a99ea6d84986f35ac8646fac7/raw/c58cede8dab4673c91a3db702d50f7447b373d98/ne_110m_land.json"
-var path_countries = "https://raw.githubusercontent.com/senv-team/senv-team.github.io/main/data/custom.geo.json"
+var path_countries = "https://raw.githubusercontent.com/senv-team/senv-team.github.io/main/data/countries.geo.json"
+var path_elnino_3_4 = "https://raw.githubusercontent.com/senv-team/senv-team.github.io/main/data/elnino_3_4.geojson"
+
 // REQUEST DATA
 d3.json(path_countries) 
 	.then(function(json) {
@@ -150,3 +156,14 @@ d3.json(path_countries)
 	});
 
 // ')
+
+/*
+Promise.all([
+    d3.json(path_countries),
+    d3.json('file02.json')
+]).then(function([map, roi]){
+    geojson = map;
+    georoi = roi;
+    initMenu();
+    update();
+  });*/

@@ -93,6 +93,7 @@
                         <g class="graticule"><path></path></g>
                         <g class="circles"></g>
                         <g class="roi"></g>
+                        <g class="bounding-box"><rect></rect></g>
                         <g class="map"></g>
                         <circle class="projection-center" r="4"></circle>
                       </svg>
@@ -100,12 +101,12 @@
 
                 <div id="menu">
                     <div class="slider item">
-                        <div class="label">scale (<span class="value">120</span>)</div>
-                        <div><span class="low">50</span> <input type="range" name="scale" min="50" max="400" value="120"> <span>400</span></div>
-                    </div>
-                    <div class="slider item">
                         <div class="label">rotate (λ) (<span class="value">0</span>)</div>
                         <div><span class="low">-180</span> <input type="range" name="rotateLambda" min="-180" max="180" value="0"> <span>180</span></div>
+                    </div>
+                    <div class="slider item">
+                        <div class="label">scale (<span class="value">120</span>)</div>
+                        <div><span class="low">50</span> <input type="range" name="scale" min="50" max="400" value="120"> <span>400</span></div>
                     </div>
                     <div class="slider item">
                         <div class="label">center (lat) (<span class="value">0</span>)</div>
