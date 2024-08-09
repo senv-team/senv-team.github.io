@@ -11,7 +11,8 @@ let projection;
 let geoGenerator = d3.geoPath()
   .projection(projection);
 
-let graticule = d3.geoGraticule();
+// i think this is some grid
+// let graticule = d3.geoGraticule();
 
 /*
 let circles = [
@@ -77,6 +78,32 @@ function initMenu() {
     .text(function(d) {return d;});
 }
 
+
+// trying the mouseover now
+/*
+function handleMouseover(e, d) {
+  
+
+  var path = svg.selectAll('path')
+     .data(pie(totals))
+     .enter()
+     .append('path')
+     .attr('d', arc)
+     .attr('fill', function (d, i) {
+          return color(d.data.title);
+     })
+     .attr('transform', 'translate(0, 0)')     //Our new hover effects
+     .on('mouseover', function (d, i) {
+          d3.select(this).transition()
+               .duration('50')
+               .attr('opacity', '.85');     .on('mouseout', function (d, i) {
+          d3.select(this).transition()
+               .duration('50')
+               .attr('opacity', '1');
+
+
+}*/
+
 function update() {
   // Update projection
   projection = d3['geo' + state.type]()
@@ -89,6 +116,7 @@ function update() {
     .rotate([state.rotateLambda, state.rotatePhi, state.rotateGamma])
 
   // Update world map
+  
   let u = d3.select('g.map')
     .selectAll('path')
     .data(geojson.features)
@@ -97,6 +125,41 @@ function update() {
     .append('path')
     .merge(u)
     .attr('d', geoGenerator)
+
+
+  // Update region of interest
+  let ro = d3.select('g.map')
+    .selectAll('path')
+    .data(georoi.features)
+
+  ro.enter()
+    .append('path')
+    .merge(ro)
+    .attr('d', geoGenerator)
+    .style('fill', 'steelblue')
+    .on('mouseover', function(event, d) {
+        // Code to handle mouseover event, e.g., change color, show tooltip, etc.
+        d3.select(this)
+            .style('fill', 'orange'); // Change fill color to orange on mouseover
+        
+        // You can also use 'event' to get the mouse position, 'd' for data, etc.
+    })
+    .on('mouseout', function(event, d) {
+        // Code to handle mouseout event, e.g., revert color, hide tooltip, etc.
+        d3.select(this)
+            .style('fill', null); // Revert fill color back to original on mouseout
+    });
+    //.on('mouseover', (event, d) => console.log(d.mass));
+    //.on('mouseover', handleMouseover)
+    /*.on('mouseover', function (d, i) {
+          d3.select(this).transition()
+               .duration('50')
+               .attr('opacity', '.85');     
+    /*.on('mouseout', function (d, i) {
+          d3.select(this).transition()
+               .duration('50')
+               .attr('opacity', '1');*/
+
 
   // Update projection center
   /*
@@ -127,18 +190,27 @@ function update() {
 
 
   // needed for zooming
+    /*
   u = d3.select('.polygons')
     .selectAll('path')
     .data(circles.map(function(d) {
       geoCircle.center(d); 
       return geoCircle();
-    }));
+    }));*/
     
-
+/*
   u.enter()
     .append('path')
     .merge(u)
     .attr('d', geoGenerator);
+
+
+  ro.enter()
+    .append('path')
+    .merge(ro)
+    .attr('d', geoGenerator);
+*/
+
 }
 
 
@@ -148,7 +220,8 @@ var path_countries = "https://raw.githubusercontent.com/senv-team/senv-team.gith
 var path_elnino_3_4 = "https://raw.githubusercontent.com/senv-team/senv-team.github.io/main/data/elnino_3_4.geojson"
 
 // REQUEST DATA
-d3.json(path_countries) 
+/*
+d3.json(path_elnino_3_4) 
 	.then(function(json) {
 		geojson = json;
 		initMenu();
@@ -156,14 +229,15 @@ d3.json(path_countries)
 	});
 
 // ')
+*/
 
-/*
+
 Promise.all([
     d3.json(path_countries),
-    d3.json('file02.json')
+    d3.json(path_elnino_3_4)
 ]).then(function([map, roi]){
     geojson = map;
     georoi = roi;
     initMenu();
     update();
-  });*/
+  });
